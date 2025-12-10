@@ -1,0 +1,3 @@
+testphp.vulnweb.com
+example.com
+testfire.net/login.jsp
