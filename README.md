@@ -18,12 +18,12 @@ What the tool can produce
 
 Prerequisites
 - Python 3.8+ (3.10/3.11 recommended)
-- Windows (commands below use `cmd.exe`) — Linux/macOS will work with equivalent shell commands.
+- Any OS with Python installed (Windows, Linux, macOS). Commands below are shell-agnostic and work in any terminal.
 
 Install dependencies
-Open `cmd.exe` in the project folder (where `requirements.txt` exists) and run:
+Open a terminal in the project folder (where `requirements.txt` exists) and run:
 
-```cmd
+```bash
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
@@ -37,15 +37,15 @@ Optional (JS-rendering)
 
 Usage
 - Basic run (HTTP-only checks):
-```cmd
+```bash
 python check_login_page.py --file urls.txt
 ```
 - Use a custom timeout or max hops (meta-refresh/redirects):
-```cmd
+```bash
 python check_login_page.py --file urls.txt --timeout 5 --max-hops 3
 ```
 - Insecure mode (only relevant if an HTTP probe ends up touching HTTPS due to environment):
-```cmd
+```bash
 python check_login_page.py --file urls.txt --insecure
 ```
 Note: `--insecure` disables certificate verification and suppresses TLS warnings. This is INSECURE — only use for testing.
@@ -90,8 +90,8 @@ example.com
 testfire.net
 testphp.vulnweb.com
 ```
-- Run:
-```cmd
+-- Run:
+```bash
 python check_login_page.py --file urls.txt
 ```
 - Example possible output (partial):
